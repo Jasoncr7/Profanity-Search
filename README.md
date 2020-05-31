@@ -5,4 +5,4 @@ You paste the text in a textarea and then press search.
 It return the result with the number of swears and the probabiity of another swear.
 *This project is not complete it can't filter out commas and fullstops to step them from interfering with the words so if the project doesn't get the exact number of swears that's the reason*
 ### Enjoy!!
-[The Web App](https://jasoncr7.github.io/Profanity-Search/)
+[The Website Profanity Search](https://jasoncr7.github.io/Profanity-Search/)
