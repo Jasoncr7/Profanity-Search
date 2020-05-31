@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', 'Tahome';
+}
+body{
+    background-color: rgb(243, 195, 132);
+}
+textarea{
+    width: 65%;
+    height: 330px;
+    margin-left: 15%;
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.85rem;
+}
+.result{
+    text-align: center;
+}
+.btn{
+    width: 10%;
+    height: 30px;
+    background-color: tan;
+    margin-left: 45%;
+    margin-bottom: 1.5%;
+}
+.nos, .spm{
+    padding-top: 1%;
+}
