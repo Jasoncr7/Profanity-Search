@@ -17,6 +17,7 @@ const textArea = document.querySelector('textarea');
 const button = document.querySelector('.btn');
 const numberOfSwears = document.querySelector('.nos');
 const swearsPerMinute = document.querySelector('.spm');
+const ageRating = document.querySelector('.age');
 
 button.addEventListener('click', (event) => {
     let string = textArea.value.toLowerCase();
@@ -120,10 +121,44 @@ button.addEventListener('click', (event) => {
     });
 
     let niggaLength = truthNine.length;
+    
+    //niggas
+    let wordTen = splitVersion.map(function(findTen) {
+        return findTen == "niggas";
+    });
+    let truthTen = wordTen.filter(function(trueTen) {
+        return trueTen === true;
+    });
 
-    let total = fuckLength + shitLength + assLength + assholeLength + dickLength + fuckingLength + bitchLength + pussyLength + niggaLength;
+    let niggasLength = truthTen.length;
+
+    let total = fuckLength + shitLength + assLength + assholeLength + dickLength + fuckingLength + bitchLength + pussyLength + niggaLength + niggasLength;
 
     let others = total / mainLength * 100;
     numberOfSwears.textContent = `${total}.0 swears`;
-    swearsPerMinute.textContent = `${others}% possibility of a swear`
+    swearsPerMinute.textContent = `${others}% possibility of a swear`;
+    
+    if(total <= 7){
+        ageRating.textContent = '1.0';
+        ageRating.style.backgroundColor = 'white';
+    } else if(total > 10){
+        ageRating.textContent = '2.5';
+        ageRating.style.backgroundColor = 'orange';
+    }
+    if(total >= 21){
+        ageRating.textContent = '3.1';
+        ageRating.style.backgroundColor = 'rosybrown';
+    }
+    if(total > 40){
+        ageRating.textContent = '5.0';
+        ageRating.style.backgroundColor = 'brown';
+    }
+    if(total > 60){
+        ageRating.textContent = '8.0';
+        ageRating.style.backgroundColor = 'brown';
+    }
+    if(total > 80){
+        ageRating.textContent = '10.0';
+        ageRating.style.backgroundColor = 'red';
+    }
 });
